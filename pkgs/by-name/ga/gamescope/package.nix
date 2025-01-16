@@ -57,7 +57,9 @@ stdenv.mkDerivation (finalAttrs: {
     rev = "refs/tags/${finalAttrs.version}";
     fetchSubmodules = true;
     hash = "sha256-AePYKdDyAtnVkL8/VeWmhJ3ATZnhyVZcU/QtVpCfTQE=";
-patches = [
+  };
+
+  patches = [
     # Make it look for shaders in the right place
     (fetchpatch {
       name = "shaders-path.patch";
@@ -72,9 +74,6 @@ patches = [
     # patch relative gamescopereaper path with absolute
     ./gamescopereaper.patch
   ];
-  };
-
-  
 
   # We can't substitute the patch itself because substituteAll is itself a derivation,
   # so `placeholder "out"` ends up pointing to the wrong place
