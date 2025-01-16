@@ -64,12 +64,12 @@ stdenv.mkDerivation (finalAttrs: {
     (fetchpatch {
       name = "shaders-path.patch";
       url = "https://raw.githubusercontent.com/WrkX/nixpkgs/refs/heads/master/pkgs/by-name/ga/gamescope/shaders-path.patch";
-      hash = "";
+      hash = "lib.fakeSha256";
     })
     (fetchpatch {
       name = "gamescopereaper.patch";
       url = "https://raw.githubusercontent.com/WrkX/nixpkgs/refs/heads/master/pkgs/by-name/ga/gamescope/gamescopereaper.patch";
-      hash = "";
+      hash = "lib.fakeSha256";
     })
     # patch relative gamescopereaper path with absolute
     ./gamescopereaper.patch
