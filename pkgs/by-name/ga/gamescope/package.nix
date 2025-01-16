@@ -62,12 +62,10 @@ stdenv.mkDerivation (finalAttrs: {
   patches = [
     # Make it look for shaders in the right place
     (fetchpatch {
-      name = "shaders-path.patch";
       url = "https://raw.githubusercontent.com/WrkX/nixpkgs/refs/heads/master/pkgs/by-name/ga/gamescope/shaders-path.patch";
       sha256 = "sha256-JnLRkoLC4FJDTEAiSbz3K5KKt49rgJUmzfy9MUvQDnY";
     })
     (fetchpatch {
-      name = "gamescopereaper.patch";
       url = "https://raw.githubusercontent.com/WrkX/nixpkgs/refs/heads/master/pkgs/by-name/ga/gamescope/gamescopereaper.patch";
       sha256 = "sha256-camwLXb61D41Ps+RR3k9t9kNDIkB5GS5+Vlga8Pz5uc";
     })
