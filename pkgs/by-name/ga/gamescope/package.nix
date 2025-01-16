@@ -3,6 +3,7 @@
   buildPackages,
   edid-decode,
   fetchFromGitHub,
+  fetchpatch,
   meson,
   pkg-config,
   ninja,
@@ -60,7 +61,16 @@ stdenv.mkDerivation (finalAttrs: {
 
   patches = [
     # Make it look for shaders in the right place
-    ./shaders-path.patch
+    (fetchpatch {
+      name = "shaders-path.patch";
+      url = "https://raw.githubusercontent.com/WrkX/nixpkgs/refs/heads/master/pkgs/by-name/ga/gamescope/shaders-path.patch";
+      hash = "";
+    })
+    (fetchpatch {
+      name = "gamescopereaper.patch";
+      url = "https://raw.githubusercontent.com/WrkX/nixpkgs/refs/heads/master/pkgs/by-name/ga/gamescope/gamescopereaper.patch";
+      hash = "";
+    })
     # patch relative gamescopereaper path with absolute
     ./gamescopereaper.patch
   ];
