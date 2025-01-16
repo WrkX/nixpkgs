@@ -64,15 +64,15 @@ stdenv.mkDerivation (finalAttrs: {
     (fetchpatch {
       name = "shaders-path.patch";
       url = "https://raw.githubusercontent.com/WrkX/nixpkgs/refs/heads/master/pkgs/by-name/ga/gamescope/shaders-path.patch";
-      hash = "lib.fakeSha256";
+      sha256 = "sha256-JnLRkoLC4FJDTEAiSbz3K5KKt49rgJUmzfy9MUvQDnY";
     })
     (fetchpatch {
       name = "gamescopereaper.patch";
       url = "https://raw.githubusercontent.com/WrkX/nixpkgs/refs/heads/master/pkgs/by-name/ga/gamescope/gamescopereaper.patch";
-      hash = "lib.fakeSha256";
+      sha256 = "sha256-camwLXb61D41Ps+RR3k9t9kNDIkB5GS5+Vlga8Pz5uc";
     })
     # patch relative gamescopereaper path with absolute
-    ./gamescopereaper.patch
+
   ];
 
   # We can't substitute the patch itself because substituteAll is itself a derivation,
