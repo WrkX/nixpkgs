@@ -13,7 +13,12 @@ in
        hash = "sha256-Zc42gp9ZoYE3/yWAQtBa+cBSjaam/e3OffJkrQTUvWc=";
      };
 
-    cargoLock.lockFile = ./src/Cargo.lock;
+   postPatch = ''
+    ln -sf ${./Cargo.lock} Cargo.lock
+  '';
+
+
+    cargoLock.lockFile = ./Cargo.lock;
 
     nativeBuildInputs = [ pkg-config makeWrapper ];
     buildInputs = with pkgs; [ glib gtk4 gtk4-layer-shell ];
