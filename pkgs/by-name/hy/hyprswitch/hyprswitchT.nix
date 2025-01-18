@@ -10,13 +10,8 @@ in
        owner = "WrkX";
        repo = "hyprswitch";
        rev = "v3.2.0";
-       hash = "sha256-Zc42gp9ZoYE3/yWAQtBa+cBSjaam/e3OffJkrQTUvWc=";
+       hash = "";
      };
-
-   postPatch = ''
-    ln -sf ${./Cargo.lock} Cargo.lock
-  '';
-
 
     cargoLock.lockFile = ./Cargo.lock;
 
