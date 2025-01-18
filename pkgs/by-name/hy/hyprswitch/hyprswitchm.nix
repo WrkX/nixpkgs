@@ -6,7 +6,7 @@ in
     name = "hyprswitch";
     version = pversion;
 
-    src  = fetchFromGitHub {
+    src = fetchFromGitHub {
        owner = "WrkX";
        repo = "hyprswitch";
        rev = "v3.2.0";
