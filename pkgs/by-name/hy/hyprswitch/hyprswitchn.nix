@@ -9,7 +9,7 @@ in
     src = fetchFromGitHub {
        owner = "WrkX";
        repo = "hyprswitch";
-       rev = "v3.2.0";
+       rev = "refs/tags/v3.2.0";
        hash = "";
      };
 
