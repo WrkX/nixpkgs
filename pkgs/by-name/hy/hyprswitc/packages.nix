@@ -13,7 +13,7 @@ in
        hash = "sha256-Zc42gp9ZoYE3/yWAQtBa+cBSjaam/e3OffJkrQTUvWc=";
      };
 
-    cargoHash = "";
+    cargoHash = "sha256-l2XMXLEJS/Gje/zrqLVwxCxUhYaKRG8Eow5Ey045FFE=";
 
     nativeBuildInputs = [ pkg-config makeWrapper ];
     buildInputs = with pkgs; [ glib gtk4 gtk4-layer-shell ];
