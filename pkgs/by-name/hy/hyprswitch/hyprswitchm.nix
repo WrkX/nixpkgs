@@ -1,6 +1,6 @@
 { lib, pkgs, pkg-config, rustPlatform, makeWrapper, fetchFromGitHub }: let
   pdescription = "Window Switcher for Hyprland";
-  pversion = "v3.2.0";
+  pversion = "v3.1.3";
 in
   rustPlatform.buildRustPackage rec {
     name = "hyprswitch";
