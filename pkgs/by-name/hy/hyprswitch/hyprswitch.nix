@@ -5,7 +5,13 @@ in
     name = package.name;
     version = package.version;
 
-    src = lib.cleanSource ./.;
+    src = fetchFromGitHub {
+        owner = "H3rmt";
+        repo = "hyprswitch";
+        rev = "v3.2.0";
+        fetchSubmodules = true;
+        hash = "";
+      };
     cargoLock.lockFile = ./Cargo.lock;
 
     nativeBuildInputs = [ pkg-config makeWrapper ];
